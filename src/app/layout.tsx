@@ -10,9 +10,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="bg-black">
+      <body className="bg-gradient-to-r from-grad-grey to-black">
         <Navbar />
-        <div className="pt-32">{children}</div>
+        <div className="pt-36">{children}</div>
         <Footer />
       </body>
     </html>

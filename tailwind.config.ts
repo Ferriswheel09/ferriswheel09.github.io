@@ -21,6 +21,7 @@ const config: Config = {
         "post-card": "#EFEFEF",
         "grad-purp": "#750072",
         "grad-blue": "#00829d",
+        "grad-grey": "#242424",
       }, 
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

@@ -47,7 +47,7 @@ export default async function Posts() {
   const posts = await getPosts();
 
   return (
-    <div className='bg-inherit w-full h-screen'>
+    <div className='bg-black w-3/4 top-0 left-0 right-0 mx-auto h-screen border-2 '>
       {posts.length > 0 ? (
         <ul className='pt-10 grid grid-cols-2 gap-4'>
           {posts.map((post, index) => (
