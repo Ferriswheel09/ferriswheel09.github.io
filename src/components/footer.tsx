@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export default function Footer(){
     return(
-        <div className="bg-black pt-2">
+        <div className="bg-neutral-900 pt-2 border-t-2">
             <div className="flex flex-row align-center justify-center">
                 <a href="https://github.com/Ferriswheel09/" target="_blank" className="px-1">
                     <img src="github-brands.png" className="h-10 hover:-translate-y-1 hover:scale-110 hover:cursor-pointer"/>

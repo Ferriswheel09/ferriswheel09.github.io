@@ -10,9 +10,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
+      <body className="bg-black">
         <Navbar />
-        <div className="pt-32 bg-neutral-400">{children}</div>
+        <div className="pt-32">{children}</div>
         <Footer />
       </body>
     </html>

@@ -16,8 +16,9 @@ export default function Navbar() {
     ];
   
     return (
-      <header className="navbar text-black z-10 fixed w-full h-min">
-        <div className="flex align-center flex-wrap items-center justify-between mx-auto p-4 bg-navbar-blue">
+      //0 55 100
+      <header className="navbar w-1/2 text-black fixed top-0 left-0 right-0 mx-auto h-min">
+        <div className="bg-gradient-to-r from-grad-purp to-grad-blue via-black via-55% flex align-center flex-wrap items-center justify-between mx-auto p-4  border-2 shadow-xl shadow-neutral-600">
           <div className="border-2 rounded-3xl p-4 w-40 text-center bg-button-teal shadow-xl">
             <h1 className="font-medium">Faris Jiwad</h1>
           </div>
