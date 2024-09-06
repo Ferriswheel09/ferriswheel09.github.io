@@ -4,14 +4,14 @@ import ProjectPage from "@/pages/project";
 
 export default function Posts() {
   return (
-    <div className="transition text-center bg-slate-400 scroll-smooth">
-      <div className="m-96" id="home">
+    <div className="transition text-center scroll-smooth">
+      <div className="mb-96" id="home">
       <HomePage />
       </div>
-      <div className="m-96" id="about">
+      <div className="mb-96" id="about">
       <AboutPage />
       </div>
-      <div className="m-96" id="projects">
+      <div className="mb-96" id="projects">
       <ProjectPage />
       </div>
     </div>
