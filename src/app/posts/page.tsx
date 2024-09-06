@@ -1,6 +1,7 @@
 import fs from 'fs/promises';
 import path from 'path';
 import matter from 'gray-matter';
+import Image from 'next/image';
 
 async function getPosts() {
   const postsDirectory = path.join(process.cwd(), '_posts'); 
@@ -13,7 +14,7 @@ async function getPosts() {
       const filePath = path.join(postsDirectory, dirent.name)
       const fileContents = await fs.readFile(filePath, 'utf8');
       const {data, content} = matter(fileContents);
-      
+
       //Push all of the data to an array to generate a card
       posts.push({
         slug: dirent.name.slice(0, -3), // filename without .md
@@ -36,11 +37,19 @@ export default async function Posts() {
   const posts = await getPosts();
 
   return (
-    <div className='bg-slate-400 w-full'>
+    <div className='bg-slate-400 w-full h-screen'>
       {posts.length > 0 ? (
-        <ul >
+        <ul className='pt-10 grid grid-cols-2 gap-4'>
           {posts.map((post, index) => (
-            <li key={index}>{post.title}</li>
+              <li className='transition mx-auto h-72 w-fit border-2 hover:shadow-xl hover:-translate-y-1 hover:scale-110 hover:bg-slate-800' key={index}>
+                <img 
+                  src={post.coverImage} 
+                  alt='Not loaded'
+                  className='w-full max-h-20'
+                />
+                <h1>{post.title}</h1>
+                <p>{post.excerpt}</p>
+              </li>
           ))}
         </ul>
       ) : (
