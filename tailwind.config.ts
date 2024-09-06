@@ -9,11 +9,16 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        gothic: ['Gothic A1', 'sans-serif'],
+        abel: ['Abel', 'sans-serif'],
+      },
       colors: {
         transparent: 'transparent',
         current: 'currentColor',  
         "navbar-blue": "#6A88A5",
-        "button-teal": "#D9D9D9"
+        "button-teal": "#D9D9D9",
+        "post-card": "#EFEFEF",
       }, 
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

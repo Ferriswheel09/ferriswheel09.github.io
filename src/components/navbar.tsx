@@ -1,6 +1,5 @@
 import React from "react";
 import Link from "next/link";
-import Server from "@/resources/server";
 import Home from "@/resources/home";
 import Info from "@/resources/about";
 import Monitor from "@/resources/project";
@@ -17,7 +16,7 @@ export default function Navbar() {
     ];
   
     return (
-      <header className="navbar text-blac k w-full h-min">
+      <header className="navbar text-black z-10 fixed w-full h-min">
         <div className="flex align-center flex-wrap items-center justify-between mx-auto p-4 bg-navbar-blue">
           <div className="border-2 rounded-3xl p-4 w-40 text-center bg-button-teal shadow-xl">
             <h1 className="font-medium">Faris Jiwad</h1>
