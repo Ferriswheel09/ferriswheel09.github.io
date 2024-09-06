@@ -47,9 +47,9 @@ export default async function Posts() {
   const posts = await getPosts();
 
   return (
-    <div className='bg-black w-3/4 top-0 left-0 right-0 mx-auto h-screen border-2 '>
+    <div className='bg-black w-3/4 top-0 left-0 right-0 mx-auto h-screen border-2 mb-20'>
       {posts.length > 0 ? (
-        <ul className='pt-10 grid grid-cols-2 gap-4'>
+        <ul className='pt-10 grid grid-cols-2 gap-x-10 gap-y-20 overflow-y-scroll'>
           {posts.map((post, index) => (
             <li key={index}>
               <BlogCard post={post}/>
