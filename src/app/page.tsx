@@ -1,8 +1,8 @@
 
 
-export default function Home() {
+export default function Posts() {
   return (
-    <div>
+    <div className="text-center">
       <h1>Welcome to my Page!</h1>
     </div>
   );
