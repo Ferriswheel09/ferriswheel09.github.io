@@ -7,7 +7,7 @@ interface PostProps{
 
 const BlogCard = ({post}:{post: PostProps}) => {
     return(
-        <div className='bg-post-card shadow-xl shadow-neutral-500 transition mx-auto h-72 w-fit max-w-xl border-4 p- hover:shadow-xl hover:shadow-neutral-300 hover:-translate-y-1 hover:scale-110 hover:cursor-pointer'>
+        <div className='bg-post-card shadow-xl shadow-neutral-500 transition mx-auto h-72 max-w-3xl border-4 p- hover:shadow-xl hover:shadow-neutral-300 hover:-translate-y-1 hover:scale-110 hover:cursor-pointer'>
             <img 
             src={post.coverImage} 
             alt='Not loaded'
