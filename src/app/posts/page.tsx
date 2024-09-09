@@ -50,9 +50,9 @@ export default async function Posts() {
     <div className='bg-inherit w-3/4 top-0 left-0 right-0 mt-40 mx-auto h-fit mb-20'>
       <h1 className='text-white text-center text-3xl'>Random Posts and/or Thoughts</h1>
       {posts.length > 0 ? (
-        <ul className='py-10 max-h-full grid grid-cols-1  gap-x-10 gap-y-20 overflow-y-scroll'>
+        <ul className='py-10 max-h-full grid grid-cols-1  gap-x-10 gap-y-20'>
           {posts.map((post, index) => (
-            <li onClick={} key={index}>
+            <li key={index}>
               <BlogCard post={post}/>
             </li>
           ))}
