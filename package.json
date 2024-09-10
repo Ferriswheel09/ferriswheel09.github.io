@@ -16,14 +16,12 @@
     "@fortawesome/react-fontawesome": "^0.2.2",
     "@nextui-org/dropdown": "^2.1.29",
     "@nextui-org/react": "^2.4.6",
-    "@rooks/use-window-size": "^4.11.2",
     "fs": "^0.0.1-security",
     "gray-matter": "^4.0.3",
     "next": "14.2.7",
     "react": "^18",
     "react-dom": "^18",
-    "react-markdown": "^9.0.1",
-    "rooks": "^7.14.1"
+    "react-markdown": "^9.0.1"
   },
   "devDependencies": {
     "@types/node": "^20",
