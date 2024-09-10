@@ -9,9 +9,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="bg-gradient-to-r from-grad-grey to-black">
+      <body className="flex flex-col min-h-screen bg-gradient-to-r from-grad-grey to-black">
         <Navbar />
-        <div>{children}</div>
+        <div className="flex-grow ">{children}</div>
         <Footer />
       </body>
     </html>
