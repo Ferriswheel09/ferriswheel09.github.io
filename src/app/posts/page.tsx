@@ -1,16 +1,8 @@
 import fs from 'fs/promises';
 import path from 'path';
 import matter from 'gray-matter';
-import Image from 'next/image';
 import BlogCard from '@/components/blogCard';
 
-interface PostProps{
-  coverImage: string | "/_posts/gradient.jpeg";
-  title: string | "No Title";
-  excerpt: string | "No Excerpt";
-  slug: string | "No slug";
-  date: string | 'No date';
-}
 
 
 async function getPosts() {
@@ -46,6 +38,7 @@ async function getPosts() {
 export default async function Posts() {
   const posts = await getPosts();
 
+
   return (
     <div className='bg-inherit w-3/4 top-0 left-0 right-0 mt-40 mx-auto h-fit mb-20'>
       <h1 className='text-white text-center text-3xl'>Random Posts and/or Thoughts</h1>
@@ -53,7 +46,7 @@ export default async function Posts() {
         <ul className='py-10 max-h-full grid grid-cols-1  gap-x-10 gap-y-20'>
           {posts.map((post, index) => (
             <li key={index}>
-              <BlogCard post={post}/>
+              <BlogCard post={post} index={index}/>
             </li>
           ))}
         </ul>
