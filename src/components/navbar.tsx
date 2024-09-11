@@ -6,11 +6,25 @@ import Home from "@/resources/home";
 import Info from "@/resources/about";
 import Monitor from "@/resources/project";
 import Bookmark from "@/resources/post";
-import { useRouter } from 'next/router'; // Import useRouter
+import { usePathname, useSearchParams } from 'next/navigation'
+
 
 export default function Navbar() {  
 
+  const [url, setCurrentURL] = useState('');
   const [dropdownState, setDropdownState] = useState(false);
+
+  const pathname = usePathname()
+  const searchParams = useSearchParams()
+
+  useEffect(() => {
+    const new_url = `${pathname}${window.location.hash}?${searchParams}`
+    console.log("Current URL", new_url);
+    if(url != new_url){
+      setDropdownState(false)
+    }
+    setCurrentURL(new_url)
+  })
 
   const navItems = [
     { key: 'home', href: '/#home', icon: <Home />, label: 'Home' },
