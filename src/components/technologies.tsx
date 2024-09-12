@@ -9,17 +9,113 @@ export default function Technologies() {
     const [rotate, setRotate] = useState(0);
 
     return (
-        <div>
+        <div className="grid grid-cols-6 gap-4">
             <motion.img
-                initial={{ y: -10 }}
-                animate={{ y: 10 }}
+                initial={{ scale: 0.3 }}
+                animate={{ rotate:360 }}
                 transition={{
                     type: "smooth",
-                    repeatType: "mirror",
-                    duration: 2,
+                    repeatType: "loop",
+                    duration: 10,
                     repeat: Infinity,
                 }}
-                src='/react.svg'
+                src='/tech/react.svg'
+                alt="floater"
+            />
+            <motion.img
+                initial={{ scale: 0.3 }}
+                animate={{ rotate:360 }}
+                transition={{
+                    type: "smooth",
+                    repeatType: "loop",
+                    duration: 10,
+                    repeat: Infinity,
+                }}
+                src='/tech/react.svg'
+                alt="floater"
+            />
+            <motion.img
+                initial={{ scale: 0.3 }}
+                animate={{ rotate:360 }}
+                transition={{
+                    type: "smooth",
+                    repeatType: "loop",
+                    duration: 10,
+                    repeat: Infinity,
+                }}
+                src='/tech/react.svg'
+                alt="floater"
+            />
+            <motion.img
+                initial={{ scale: 0.3 }}
+                animate={{ rotate:360 }}
+                transition={{
+                    type: "smooth",
+                    repeatType: "loop",
+                    duration: 10,
+                    repeat: Infinity,
+                }}
+                src='/tech/react.svg'
+                alt="floater"
+            />
+            <motion.img
+                initial={{ scale: 0.3 }}
+                animate={{ rotate:360 }}
+                transition={{
+                    type: "smooth",
+                    repeatType: "loop",
+                    duration: 10,
+                    repeat: Infinity,
+                }}
+                src='/tech/react.svg'
+                alt="floater"
+            />
+            <motion.img
+                initial={{ scale: 0.3 }}
+                animate={{ rotate:360 }}
+                transition={{
+                    type: "smooth",
+                    repeatType: "loop",
+                    duration: 10,
+                    repeat: Infinity,
+                }}
+                src='/tech/react.svg'
+                alt="floater"
+            />
+            <motion.img
+                initial={{ scale: 0.3 }}
+                animate={{ rotate:360 }}
+                transition={{
+                    type: "smooth",
+                    repeatType: "loop",
+                    duration: 10,
+                    repeat: Infinity,
+                }}
+                src='/tech/react.svg'
+                alt="floater"
+            />
+            <motion.img
+                initial={{ scale: 0.3 }}
+                animate={{ rotate:360 }}
+                transition={{
+                    type: "smooth",
+                    repeatType: "loop",
+                    duration: 10,
+                    repeat: Infinity,
+                }}
+                src='/tech/react.svg'
+                alt="floater"
+            />
+            <motion.img
+                initial={{ scale: 0.3 }}
+                animate={{ rotate:360 }}
+                transition={{
+                    type: "smooth",
+                    repeatType: "loop",
+                    duration: 10,
+                    repeat: Infinity,
+                }}
+                src='/tech/react.svg'
                 alt="floater"
             />
         </div>
