@@ -10,19 +10,20 @@ interface TechnologiesProps {
 const getRandomNumber = (min: number, max: number) =>
     Math.random() * (max - min) + min;
 
+const languageTexts = [
+    "C#", "C", "C++", "Java", "NextJS", "NodeJS", "Python", "React", "Typescript"
+]
+
 export default function Technologies({ images }: TechnologiesProps) {
     return (
-        <div className="grid grid-cols-6 gap-4">
+        <div className="grid grid-cols-3 gap-4">
             {images.map((src, index) => {
                 // Random values for rotation direction, initial position, and scaling
-                const initialX = getRandomNumber(-50, 50); // Random x shift
-                const initialY = getRandomNumber(-50, 50); // Random y shift
                 const rotateDirection = Math.random() > 0.5 ? 360 : -360; // Random rotation direction
 
                 return (
-                    <div>
+                    <div key={index} className="flex flex-col items-center justify-center border-2 border-white hover:bg-slate-400">
                         <motion.img
-                            key={index}
                             animate={{ rotate: rotateDirection }}
                             transition={{
                                 type: "smooth",
@@ -32,8 +33,9 @@ export default function Technologies({ images }: TechnologiesProps) {
                             }}
                             src={src}
                             alt="floater"
-                            className="w-28" // Example size, adjust as needed
+                            className="w-40 m-4" // Example size, adjust as needed
                         />
+                        <p className="text-white text-xl mt-4">{languageTexts[index]}</p>
                     </div>
                 );
             })}
