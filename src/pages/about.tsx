@@ -17,7 +17,7 @@ async function getImages(){
 export default async function AboutPage(){
     const images = await getImages()
     return(
-        <div className="pt-36 text-white">
+        <div className="pt-36 text-white overflow-hidden">
             <h1>This will be the About Page!</h1>
             <h1>Below is some of the technologies I know:</h1>
             <Technologies images={images}/>

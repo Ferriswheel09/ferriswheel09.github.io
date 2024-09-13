@@ -22,7 +22,7 @@ export default function Technologies({ images }: TechnologiesProps) {
                 const rotateDirection = Math.random() > 0.5 ? 360 : -360; // Random rotation direction
 
                 return (
-                    <div key={index} className="flex flex-col items-center justify-center border-2 border-white hover:bg-slate-400">
+                    <div key={index} className="flex flex-col items-center justify-center border-2 border-white hover:bg-slate-400 hover:-translate-y-1 hover:scale-125 hover:z-40">
                         <motion.img
                             animate={{ rotate: rotateDirection }}
                             transition={{
@@ -33,7 +33,7 @@ export default function Technologies({ images }: TechnologiesProps) {
                             }}
                             src={src}
                             alt="floater"
-                            className="w-40 m-4" // Example size, adjust as needed
+                            className="w-32 m-4" // Example size, adjust as needed
                         />
                         <p className="text-white text-xl mt-4">{languageTexts[index]}</p>
                     </div>

@@ -5,10 +5,10 @@ import ProjectPage from "@/pages/project";
 export default function Posts() {
   return (
     <div className="transition text-center scroll-smooth">
-      <div className="mb-96" id="home">
+      <div className="py-96" id="home">
       <HomePage />
       </div>
-      <div className="mb-96" id="about">
+      <div className="mb-28" id="about">
       <AboutPage />
       </div>
       <div className="mb-96" id="projects">
