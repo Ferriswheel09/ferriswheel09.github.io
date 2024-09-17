@@ -10,7 +10,7 @@ export default function Footer(){
                 <a href="https://github.com/Ferriswheel09/" target="_blank" className="px-1">
                     <img src="/github-brands.png" className="h-10 hover:-translate-y-1 hover:scale-110 hover:cursor-pointer"/>
                 </a>
-                <a href="https://www.linkedin.com/in/faris-jiwad/" className="px-1">
+                <a href="https://www.linkedin.com/in/faris-jiwad/" target="_blank" className="px-1">
                     <img src="/linkedin-brands.png" className="h-10 hover:-translate-y-1 hover:scale-110 hover:cursor-pointer"/>
                 </a>
             </div>
