@@ -47,7 +47,7 @@ const BlogPost = async ({ params }: { params: { slug: string } }) => {
 
   return (
     <div className='mt-32 text-white'>
-      <div className='sm:ml-4 items-center bg-zinc-500 shadow-2xl shadow-zinc-500 sm:flex sm:flex-row'>
+      <div className='sm:ml-4 items-center shadow-2xl shadow-zinc-500 sm:flex sm:flex-row'>
         <div className='flex-1 pl-2'>
           <h1 className='text-6xl font-bold mb-2'>{details!.title}</h1>
           <h2 className='text-3xl'>{details!.date}</h2>
@@ -62,13 +62,13 @@ const BlogPost = async ({ params }: { params: { slug: string } }) => {
       </div>
 
       <ReactMarkdown 
-        className='text-center my-20'
+        className='my-20 text-white'
         components={{
           h1: ({node, ...props}) => (
-            <h1 className="text-3xl font-bold text-blue-500" {...props} />
+            <h1 className="text-center text-3xl font-bold" {...props} />
           ),
           p: ({ node, ...props }) => (
-            <p className="text-base text-gray-700" {...props} />
+            <p className="text-left text-base m-6 text-xl leading-relaxed" {...props} />
           ),
         }}
       >

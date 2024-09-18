@@ -40,7 +40,7 @@ export default async function Posts() {
 
 
   return (
-    <div className='bg-inherit w-3/4 top-0 left-0 right-0 mt-40 mx-auto h-fit mb-20 '>
+    <div className='relative min-h-screen inset-0 h-full w-full items-center px-5 pb-24 pt-36 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)] '>
       <h1 className='text-white text-center text-3xl'>Random Posts and/or Thoughts</h1>
       {posts.length > 0 ? (
         <ul className='py-10 max-h-full grid grid-cols-1  gap-x-10 gap-y-20'>

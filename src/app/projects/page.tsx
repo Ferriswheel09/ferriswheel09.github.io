@@ -2,7 +2,7 @@ import React from "react";
 
 export default function ProjectPage(){
     return(
-        <div className="relative text-white inset-0 h-full w-full items-center px-5 pb-24 pt-36 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]">
+        <div className="relative min-h-screen text-white inset-0 h-full w-full items-center px-5 pb-24 pt-36 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]">
             <h1 className="text-4xl my-4 font-bold tracking-wider text-center">Experience</h1>
             <div className="my-4">
                 <h1 className="text-2xl">GWUSEC</h1>
@@ -45,10 +45,16 @@ export default function ProjectPage(){
                     </li>
                 </ul>
             </div>
-            <div>
+            <div className="my-4">
                 <h1 className="text-2xl">GBCS</h1>
                 <h2 className="text-xl">Fullstack Development: May 2024 - August 2024</h2>
             </div>
+            <div className="my-4">
+                <h1 className="text-2xl">GW</h1>
+                <h2 className="text-xl">Student Academic Assistant: August 2023 - May 2024</h2>
+            </div>
+            <h1 className="text-4xl my-4 font-bold tracking-wider text-center">Projects</h1>
+
         </div>
     )
 }
