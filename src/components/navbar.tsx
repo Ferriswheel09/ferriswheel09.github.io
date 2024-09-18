@@ -62,7 +62,7 @@ export default function Navbar() {
           </div>
 
           {/* Normal Menu for Regular Screens */}
-          <ul className="hidden font-medium md:flex flex-row justify-end pl-2 space-x-4">
+          <ul className="hidden font-medium md:flex flex-row justify-end pl-2 space-x-4 ">
             {navItems.map(item => (
               <li key={item.key} >
                 <Link
@@ -70,7 +70,7 @@ export default function Navbar() {
                   className="transition flex flex-row space-x-2 bg-button-teal border-2 max-w-32 min-w-fit border-white rounded-3xl p-4 mx-2 hover:text-black hover:bg-slate-100 hover:shadow-xl hover:-translate-y-1 hover:scale-110"
                 >
                   {item.icon}
-                  <p className="pl-5">{item.label}</p>
+                  <p className="">{item.label}</p>
                 </Link>
               </li>
             ))}

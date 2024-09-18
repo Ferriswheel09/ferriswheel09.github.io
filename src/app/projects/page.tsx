@@ -3,11 +3,11 @@ import React from "react";
 export default function ProjectPage(){
     return(
         <div className="relative text-white inset-0 h-full w-full items-center px-5 pb-24 pt-36 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]">
-            <h1 className="text-3xl my-4">Experience</h1>
+            <h1 className="text-4xl my-4 font-bold tracking-wider text-center">Experience</h1>
             <div className="my-4">
-                <h1>GWUSEC</h1>
-                <h2>Privacy Labels Observatory</h2>
-                <ul>
+                <h1 className="text-2xl">GWUSEC</h1>
+                <h2 className="text-xl">Privacy Labels Observatory: May 2023 - Present</h2>
+                <ul className="list-disc ml-8">
                     <li>
                     Coordinated converting a research paper on Apple's privacy labels into an interactive website showcasing millions of applications into 4
                     corresponding privacy tags based on the level of privacy accessibility
@@ -26,9 +26,9 @@ export default function ProjectPage(){
                 </ul>
             </div>
             <div className="my-4">
-                <h1>GW Systems Lab</h1>
-                <h2>Kernel Reductions</h2>
-                <ul>
+                <h1 className="text-2xl">GW Systems Lab</h1>
+                <h2 className="text-xl">Kernel Reductions: February 2024 - Present</h2>
+                <ul className="list-disc ml-8">
                     <li>
                     Researched on reducing the size of the Kernel by more than half employing projects such as Essence and Cozart
                     </li>
@@ -46,8 +46,8 @@ export default function ProjectPage(){
                 </ul>
             </div>
             <div>
-                <h1>GBCS</h1>
-                <h2>Fullstack Development</h2>
+                <h1 className="text-2xl">GBCS</h1>
+                <h2 className="text-xl">Fullstack Development: May 2024 - August 2024</h2>
             </div>
         </div>
     )
