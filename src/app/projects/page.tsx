@@ -6,7 +6,8 @@ export default function ProjectPage(){
             <h1 className="text-4xl my-4 font-bold tracking-wider text-center">Experience</h1>
             <div className="my-4">
                 <h1 className="text-2xl">GWUSEC</h1>
-                <h2 className="text-xl">Privacy Labels Observatory: May 2023 - Present</h2>
+                <h2 className="text-xl">Privacy Labels Observatory</h2>
+                <h3 className="text-lg">May 2023 - Present</h3>
                 <ul className="list-disc ml-8">
                     <li>
                     Coordinated converting a research paper on Apple's privacy labels into an interactive website showcasing millions of applications into 4
@@ -27,7 +28,8 @@ export default function ProjectPage(){
             </div>
             <div className="my-4">
                 <h1 className="text-2xl">GW Systems Lab</h1>
-                <h2 className="text-xl">Kernel Reductions: February 2024 - Present</h2>
+                <h2 className="text-xl">Systems Researcher</h2>
+                <h3 className="text-lg">February 2024 - Present</h3>
                 <ul className="list-disc ml-8">
                     <li>
                     Researched on reducing the size of the Kernel by more than half employing projects such as Essence and Cozart
@@ -46,12 +48,37 @@ export default function ProjectPage(){
                 </ul>
             </div>
             <div className="my-4">
-                <h1 className="text-2xl">GBCS</h1>
-                <h2 className="text-xl">Fullstack Development: May 2024 - August 2024</h2>
+                <h1 className="text-2xl">GBCS Group</h1>
+                <h2 className="text-xl">Fullstack Development</h2>
+                <h3 className="text-lg">May 2024 - August 2024</h3>
+                <ul className="list-disc ml-8">
+                    <li>
+                    Developed a comprehensive proposal website using Next.js to compete for transportation contracts
+                    </li>
+                    <li>
+                    Collaborated with over 15 other interns to integrate technologies such as Prisma (for Object Relational Mappings) and Express.js to properly
+                    </li>
+                    <li>
+                    Initiated and led a cross-functional team to migrate the system from Fireship to Prisma, ensuring the project met its two week deadline and
+                    improved system performance and reliability
+                    </li>
+                </ul>
             </div>
             <div className="my-4">
-                <h1 className="text-2xl">GW</h1>
-                <h2 className="text-xl">Student Academic Assistant: August 2023 - May 2024</h2>
+                <h1 className="text-2xl">GW Department of CS</h1>
+                <h2 className="text-xl">Student Academic Assistant</h2>
+                <h3 className="text-lg">August 2023 - May 2024</h3>
+                <ul className="list-disc ml-8">
+                    <li>
+                    Guided students through 8 modules covering the foundation of Data Structures, including linked lists, recursion, and graph theory
+                    </li>
+                    <li>
+                    Strengthened understanding of algorithms, command line interfaces, and data structures by leading a 2 hour study hall session
+                    </li>
+                    <li>
+                    Collaborated with learning assistants to create group activities to encourage critical thinking for 28 students
+                    </li>
+                </ul>
             </div>
             <h1 className="text-4xl my-4 font-bold tracking-wider text-center">Projects</h1>
 

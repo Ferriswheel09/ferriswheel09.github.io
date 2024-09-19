@@ -12,9 +12,10 @@ export default function HomePage() {
                 <h2 className="text-4xl text-center text-white">
                     <ReactTyped
                         strings={[
-                            "Fullstack Developer / Systems Engineer / Machine Learning Engineer"
+                            "Fullstack Engineer", "Systems Engineer", "Machine Learning Engineer", "Software Developer"
                         ]}
                         typeSpeed={40}
+                        backSpeed={50}
                     />
                 </h2>
             </div>
