@@ -27,6 +27,7 @@ const BlogCard = ({post}:{post: PostProps, index:number}) => {
             className='w-full max-h-40'
             />
             <h1 className='text-2xl pl-1 pt-2 font-gothic'>{post.title}</h1>
+            <h2 className='text-xl pl-1 font-gothic'>{post.date}</h2>
             <p className='font-abel pl-1 text-lg text-wrap'>{post.excerpt}</p>
       </div>
     )
