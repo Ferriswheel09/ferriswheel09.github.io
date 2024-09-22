@@ -2,7 +2,7 @@ import React from "react";
 
 export default function ProjectPage(){
     return(
-        <div className="relative min-h-screen text-white inset-0 h-full w-full items-center px-5 pb-24 pt-36 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]">
+        <div className="relative min-h-screen text-white inset-0 h-full w-full items-center px-5 pb-24 pt-36 bg-gradient-to-r from-grad-purp to-grad-blue">
             <h1 className="text-4xl my-4 font-bold tracking-wider text-center">Experience</h1>
             <div className="my-4">
                 <h1 className="text-2xl">GWUSEC</h1>

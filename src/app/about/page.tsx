@@ -40,7 +40,7 @@ export default async function AboutPage() {
     const tasks = TaskList()
     console.log(tasks)
     return (
-        <div className="pt-36 text-white overflow-x-hidden inset-0 h-full w-full items-center px-5 pb-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]">
+        <div className="pt-36 text-white overflow-x-hidden inset-0 h-full w-full items-center px-5 pb-24 bg-gradient-to-r from-grad-purp to-grad-blue">
             <div>
                 <h1 className="text-4xl font-bold my-4">Things on my to-do list:</h1>
                 <ul>
