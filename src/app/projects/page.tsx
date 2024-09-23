@@ -2,7 +2,7 @@ import React from "react";
 
 export default function ProjectPage(){
     return(
-        <div className="relative min-h-screen text-white inset-0 h-full w-full items-center px-5 pb-24 pt-36 bg-gradient-to-r from-grad-purp to-grad-blue">
+        <div className="relative min-h-screen text-white inset-0 h-full w-full items-center px-5 pb-24 pt-36">
             <h1 className="text-4xl my-4 font-bold tracking-wider text-center">Experience</h1>
             <div className="my-4">
                 <h1 className="text-2xl">GWUSEC</h1>
@@ -80,8 +80,27 @@ export default function ProjectPage(){
                     </li>
                 </ul>
             </div>
-            <h1 className="text-4xl my-4 font-bold tracking-wider text-center">Projects</h1>
-
+            <h1 className="text-4xl my-8 font-bold tracking-wider text-center">Projects</h1>
+            <div>
+                <h2 className="text-2xl my-4">Neighborhood Dataset</h2>
+                <p>Accomplished a detailed analysis of neighborhood pricing, utilizing Python libraries such as scikit-learn and Selenium,
+                by scraping data from sources such as Apartments.com and Zillow, and developing a model to predict prices</p>
+            </div>
+            <div>
+                <h2 className="text-2xl my-4">Prayer Application</h2>
+                <p>Created an Android application, leveraging Kotlin, implementing object hierarchies, local storage, and permissions,
+                allowing users to log into an account via authentication, check up to date prayer times, and utilize the compass</p>
+            </div>
+            <div>
+                <h2 className="text-2xl my-4">Shell Console</h2>
+                <p>Built a local terminal, leveraging C, allowing users to perform various commands, including listing current directory, piping output to
+                another command, outputting the results of a command to a file, and job management</p>
+            </div>
+            <div>
+                <h2 className="text-2xl my-4">Online Poker</h2>
+                <p>Developed an online Poker game, implementing multithreading and networking, in Java allowing users to enjoy a betting game where
+                two players (and in future updates, up to 8 players) can bet on a hand and compete </p>
+            </div>
         </div>
     )
 }
