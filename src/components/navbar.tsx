@@ -7,6 +7,8 @@ import Info from "@/resources/about";
 import Monitor from "@/resources/project";
 import Bookmark from "@/resources/post";
 import { usePathname, useSearchParams } from 'next/navigation'
+import { ThemeSwitcher } from "./themeSwitcher"
+import { useTheme } from "next-themes";
 
 
 export default function Navbar() {  
@@ -16,6 +18,8 @@ export default function Navbar() {
 
   const pathname = usePathname()
   const searchParams = useSearchParams()
+
+  const { theme } = useTheme();
 
   useEffect(() => {
     const new_url = `${pathname}${window.location.hash}?${searchParams}`
@@ -37,9 +41,12 @@ export default function Navbar() {
 
     return (
       <header className="navbar w-full z-50 text-black fixed top-0 left-0 right-0 mx-auto h-36">
-        <div className="bg-gradient-to-r from-grad-purp to-grad-blue via-black via-55% flex items-center justify-between mx-auto p-4 border-2 shadow-xl shadow-neutral-600 whitespace-nowrap">
+        <div className={` ${theme === 'dark' ? 'bg-gradient-to-r from-grad-purp to-grad-blue via-black via-55% ' : 'bg-gradient-to-r from-grad-purp to-grad-blue via-white via-55% '}flex items-center justify-between mx-auto p-4 border-2 shadow-xl shadow-neutral-600 whitespace-nowrap`}>
           <div className="border-2 rounded-3xl p-4 w-40 max-w-fit text-center bg-button-teal shadow-xl">
             <h1 className="font-medium">Faris Jiwad</h1>
+          </div>
+          <div className="bg-slate-400 w-40">
+            <ThemeSwitcher />
           </div>
           {/* Dropdown menu for mobile screens */}
           <div className="block md:hidden relative">
