@@ -1,11 +1,17 @@
+"use client";
+
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { useTheme } from "next-themes";
 
 
 
 export default function Footer(){
+
+    const { theme } = useTheme();
+
     return(
-        <div className="bg-neutral-900 pt-2 border-t-2 z-50">
+        <div className={`${theme === 'dark' ? 'bg-neutral-900' : 'bg-neutral-100'} pt-2 border-t-2 z-50`}>
             <div className="flex flex-row align-center justify-center">
                 <a href="https://github.com/Ferriswheel09/" target="_blank" className="px-1">
                     <img src="/github-brands.png" className="h-10 hover:-translate-y-1 hover:scale-110 hover:cursor-pointer"/>
