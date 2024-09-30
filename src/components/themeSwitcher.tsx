@@ -8,18 +8,13 @@ import { MdDarkMode } from "react-icons/md";
 import { MdOutlineDarkMode } from "react-icons/md";
 
 export function ThemeSwitcher() {
-  const [mounted, setMounted] = useState(false)
   const { theme, setTheme } = useTheme()
+  
+  const isDark = theme === "dark";
 
-  useEffect(() => {
-    setMounted(true)
-  }, [])
-
-  if(!mounted) return null
-  console.log("theme", theme)
   return (
     <div>
-     { theme === "dark" ?
+     { isDark ?
       <button aria-label="Light Mode" onClick={() => setTheme('light')}>
         <MdDarkMode></MdDarkMode>
       </button>
