@@ -13,11 +13,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="flex flex-col min-h-screen bg-gradient-to-r from-grad-grey to-black">
-          <NextThemesProvider attribute="class" defaultTheme="light">
-            <Navbar />
-            <div className="flex-grow ">{children}</div>
-            <Footer />
-          </NextThemesProvider>
+        <NextThemesProvider attribute="class" defaultTheme="light">
+          <Navbar /> {/* Header */}
+          <main className="flex-grow">{children}</main> {/* Content */}
+          <Footer /> {/* Footer */}
+        </NextThemesProvider>
       </body>
     </html>
   );
