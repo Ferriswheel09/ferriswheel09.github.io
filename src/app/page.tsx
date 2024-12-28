@@ -15,8 +15,6 @@ export default function HomePage() {
             strings={[
               "Fullstack Engineer",
               "Systems Engineer",
-              "Kernel Developer",
-              "OS Tinkerer",
               "Machine Learning Engineer",
               "Software Developer",
             ]}
