@@ -18,7 +18,7 @@ export function ThemeSwitcher() {
         aria-label={isDark ? "Light Mode" : "Dark Mode"}
         onClick={() => setTheme(isDark ? "light" : "dark")}
         className={`flex items-center justify-center p-2 border-2 rounded-md transition-colors duration-300 
-          ${isDark ? 'bg-gray-800 text-white border-white' : 'bg-gray-200 text-black border-black'} 
+          ${isDark ? 'bg-black text-white border-white' : 'bg-white text-black border-black'} 
           hover:scale-105`}
       >
         {isDark ? <MdDarkMode /> : <MdLightMode />}
