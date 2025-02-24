@@ -8,7 +8,7 @@ export default function HomePage() {
     <div className="flex items-center justify-center h-full w-full px-5 bg-gradient-to-r from-grad-purp to-grad-blue">
       <div className="text-center">
         <h2 className="text-2xl text-slate-400 mb-4">
-          Hey there, I'm Faris. I code things and it works sometimes
+          Hey there, I'm Faris. I code things and they work sometimes
         </h2>
         <h2 className="text-4xl text-white">
           <ReactTyped

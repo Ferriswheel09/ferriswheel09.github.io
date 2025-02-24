@@ -1,6 +1,21 @@
 import React from "react";
+import AboutComponent from "@/components/aboutPage";
+
+const TaskList = () => {
+    const tasks = [
+        { id: 1, text: "Get an AWS Cloud Practitioner and AWS Solutions Architect Associate Certificates", complete: true },
+        { id: 2, text: "Create an online multiplayer game engine (Flock) that will support massive concurrent networking", complete: false },
+        { id: 3, text: "Learn Rust to assist in said game engine (due to networking and JS benefits)", complete: false },
+        { id: 4, text: "Finish this website and get hosting set up", complete: false },
+        { id: 5, text: "Get an AWS Security and AWS Machine Learning Engineer Certificates", complete: false },
+    ]
+
+    return tasks
+}
 
 export default function ProjectPage(){
+    const task = TaskList();
+
     return(
         <div className="relative min-h-screen text-white inset-0 h-full w-full items-center px-5 pb-24 pt-36">
             <h1 className="text-4xl my-4 font-bold tracking-wider text-center">Experience</h1>
@@ -100,6 +115,10 @@ export default function ProjectPage(){
                 <h2 className="text-2xl my-4">Online Poker</h2>
                 <p>Developed an online Poker game, implementing multithreading and networking, in Java allowing users to enjoy a betting game where
                 two players (and in future updates, up to 8 players) can bet on a hand and compete </p>
+            </div>
+            <div>
+                <h1 className="text-4xl my-4">Todos:</h1>
+                <AboutComponent tasks={task} />
             </div>
         </div>
     )

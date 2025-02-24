@@ -32,7 +32,6 @@ export default function Navbar() {
 
   const navItems = [
     { key: 'home', href: '/', icon: <Home />, label: 'Home' },
-    { key: 'about', href: '/about', icon: <Info />, label: 'About' },
     { key: 'projects', href: '/projects', icon: <Monitor />, label: 'Projects' },
     { key: 'posts', href: '/posts', icon: <Bookmark />, label: 'Posts' },
   ];

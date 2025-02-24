@@ -3,9 +3,8 @@
 
 import React from "react";
 import { useTheme } from "next-themes";
-import Technologies from "@/components/technologies";
 
-export default function AboutComponent({tasks, images}: {tasks: any, images:any}) {
+export default function AboutComponent({tasks}: {tasks: any}) {
   const { theme, setTheme } = useTheme();
 
   return (
@@ -35,8 +34,6 @@ export default function AboutComponent({tasks, images}: {tasks: any, images:any}
                     ))}
                 </ul>
             </div>
-            <h1 className="text-4xl font-bold my-4">Skills:</h1>
-            <Technologies images={images} />
     </div>
   );
 }
