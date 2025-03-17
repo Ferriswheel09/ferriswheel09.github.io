@@ -43,7 +43,7 @@ export default async function Posts() {
     <div className='relative min-h-screen inset-0 h-full w-full items-center px-5 pb-24 pt-36'>
       <h1 className='text-white text-center text-3xl'>Updates & Misc</h1>
       {posts.length > 0 ? (
-        <ul className='py-10 max-h-full grid grid-cols-1 sm:grid-cols-2  gap-x-10 gap-y-20'>
+        <ul className='py-10 max-h-full grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-20'>
           {posts.map((post, index) => (
             <li key={index}>
               <BlogCard post={post} index={index}/>

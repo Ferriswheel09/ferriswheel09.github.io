@@ -1,125 +1,151 @@
+"use client"
+
 import React from "react";
-import AboutComponent from "@/components/aboutPage";
+import { useTheme } from "next-themes";
 
-const TaskList = () => {
-    const tasks = [
-        { id: 1, text: "Get an AWS Cloud Practitioner and AWS Solutions Architect Associate Certificates", complete: true },
-        { id: 2, text: "Create an online multiplayer game engine (Flock) that will support massive concurrent networking", complete: false },
-        { id: 3, text: "Learn Rust to assist in said game engine (due to networking and JS benefits)", complete: false },
-        { id: 4, text: "Finish this website and get hosting set up", complete: false },
-        { id: 5, text: "Get an AWS Security and AWS Machine Learning Engineer Certificates", complete: false },
-    ]
+export default function ProjectPage() {
+    const { theme } = useTheme();
+    
+    // Theme-based styles
+    const getPageStyle = () => {
+        return theme === 'dark' 
+            ? "bg-gray-900 text-white" 
+            : "bg-gray-50 text-gray-800";
+    };
+    
+    const getHeadingStyle = () => {
+        return theme === 'dark'
+            ? "text-white" 
+            : "text-gray-900";
+    };
+    
+    const getSubHeadingStyle = () => {
+        return theme === 'dark'
+            ? "text-gray-200" 
+            : "text-gray-800";
+    };
+    
+    const getDateStyle = () => {
+        return theme === 'dark'
+            ? "text-gray-400" 
+            : "text-gray-600";
+    };
+    
+    const getProjectCardStyle = () => {
+        return theme === 'dark'
+            ? "bg-gray-800 border-gray-700" 
+            : "bg-white border-gray-200";
+    };
 
-    return tasks
-}
-
-export default function ProjectPage(){
-    const task = TaskList();
-
-    return(
-        <div className="relative min-h-screen text-white inset-0 h-full w-full items-center px-5 pb-24 pt-36">
-            <h1 className="text-4xl my-4 font-bold tracking-wider text-center">Experience</h1>
+    return (
+        <div className={`relative min-h-screen inset-0 h-full w-full items-center px-5 pb-24 pt-36 ${getPageStyle()}`}>
+            <h1 className={`text-4xl my-4 font-bold tracking-wider text-center ${getHeadingStyle()}`}>Experience</h1>
+            
             <div className="my-4">
-                <h1 className="text-2xl">GWUSEC</h1>
-                <h2 className="text-xl">Privacy Labels Observatory</h2>
-                <h3 className="text-lg">May 2023 - Present</h3>
+                <h1 className={`text-2xl ${getHeadingStyle()}`}>GWUSEC</h1>
+                <h2 className={`text-xl ${getSubHeadingStyle()}`}>Privacy Labels Observatory</h2>
+                <h3 className={`text-lg ${getDateStyle()}`}>May 2023 - Present</h3>
                 <ul className="list-disc ml-8">
                     <li>
-                    Coordinated converting a research paper on Apple's privacy labels into an interactive website showcasing millions of applications into 4
-                    corresponding privacy tags based on the level of privacy accessibility
+                        Coordinated converting a research paper on Apple's privacy labels into an interactive website showcasing millions of applications into 4
+                        corresponding privacy tags based on the level of privacy accessibility
                     </li>
                     <li>
-                    Programmed a fullstack system, using a React.js frontend, a Django backend, and a SQL database, allowing users to view the expansive list of
-                    applications and data analytics
+                        Programmed a fullstack system, using a React.js frontend, a Django backend, and a SQL database, allowing users to view the expansive list of
+                        applications and data analytics
                     </li>
                     <li>
-                    Refactored the stack, after the transfer of the millions of applications across hundreds of runs to the non-relational database, to a React.js
-                    frontend, a Node.js (Express) backend, and an Elastic database, for more efficient search performance
+                        Refactored the stack, after the transfer of the millions of applications across hundreds of runs to the non-relational database, to a React.js
+                        frontend, a Node.js (Express) backend, and an Elastic database, for more efficient search performance
                     </li>
                     <li>
-                    Initiated conversations with fellow researchers to conduct data analysis on millions of applications over the past four years
+                        Initiated conversations with fellow researchers to conduct data analysis on millions of applications over the past four years
                     </li>
                 </ul>
             </div>
+            
             <div className="my-4">
-                <h1 className="text-2xl">GW Systems Lab</h1>
-                <h2 className="text-xl">Systems Researcher</h2>
-                <h3 className="text-lg">February 2024 - Present</h3>
+                <h1 className={`text-2xl ${getHeadingStyle()}`}>GW Systems Lab</h1>
+                <h2 className={`text-xl ${getSubHeadingStyle()}`}>Systems Researcher</h2>
+                <h3 className={`text-lg ${getDateStyle()}`}>February 2024 - Present</h3>
                 <ul className="list-disc ml-8">
                     <li>
-                    Researched on reducing the size of the Kernel by more than half employing projects such as Essence and Cozart
+                        Researched on reducing the size of the Kernel by more than half employing projects such as Essence and Cozart
                     </li>
                     <li>
-                    Experimented with Python and open-source development and conducted traces of the Kernel in order to build relational mappings between
-                    app configurations and corresponding Kernel calls
+                        Experimented with Python and open-source development and conducted traces of the Kernel in order to build relational mappings between
+                        app configurations and corresponding Kernel calls
                     </li>
                     <li>
-                    Utilized advanced testing tools such as QEMU tracer and ftrace to generate the mappings and rigorously verified the accuracy of the mappings
-                    generated by Essence, ensuring seamless integration and optimal operation all four phases
+                        Utilized advanced testing tools such as QEMU tracer and ftrace to generate the mappings and rigorously verified the accuracy of the mappings
+                        generated by Essence, ensuring seamless integration and optimal operation all four phases
                     </li>
                     <li>
-                    Modified code-base by applying Github Actions to automate the Kernel reductions by more than half
+                        Modified code-base by applying Github Actions to automate the Kernel reductions by more than half
                     </li>
                 </ul>
             </div>
+            
             <div className="my-4">
-                <h1 className="text-2xl">GBCS Group</h1>
-                <h2 className="text-xl">Fullstack Development</h2>
-                <h3 className="text-lg">May 2024 - August 2024</h3>
+                <h1 className={`text-2xl ${getHeadingStyle()}`}>GBCS Group</h1>
+                <h2 className={`text-xl ${getSubHeadingStyle()}`}>Fullstack Development</h2>
+                <h3 className={`text-lg ${getDateStyle()}`}>May 2024 - August 2024</h3>
                 <ul className="list-disc ml-8">
                     <li>
-                    Developed a comprehensive proposal website using Next.js to compete for transportation contracts
+                        Developed a comprehensive proposal website using Next.js to compete for transportation contracts
                     </li>
                     <li>
-                    Collaborated with over 15 other interns to integrate technologies such as Prisma (for Object Relational Mappings) and Express.js to properly
+                        Collaborated with over 15 other interns to integrate technologies such as Prisma (for Object Relational Mappings) and Express.js to properly
                     </li>
                     <li>
-                    Initiated and led a cross-functional team to migrate the system from Fireship to Prisma, ensuring the project met its two week deadline and
-                    improved system performance and reliability
+                        Initiated and led a cross-functional team to migrate the system from Fireship to Prisma, ensuring the project met its two week deadline and
+                        improved system performance and reliability
                     </li>
                 </ul>
             </div>
+            
             <div className="my-4">
-                <h1 className="text-2xl">GW Department of CS</h1>
-                <h2 className="text-xl">Student Academic Assistant</h2>
-                <h3 className="text-lg">August 2023 - May 2024</h3>
+                <h1 className={`text-2xl ${getHeadingStyle()}`}>GW Department of CS</h1>
+                <h2 className={`text-xl ${getSubHeadingStyle()}`}>Student Academic Assistant</h2>
+                <h3 className={`text-lg ${getDateStyle()}`}>August 2023 - May 2024</h3>
                 <ul className="list-disc ml-8">
                     <li>
-                    Guided students through 8 modules covering the foundation of Data Structures, including linked lists, recursion, and graph theory
+                        Guided students through 8 modules covering the foundation of Data Structures, including linked lists, recursion, and graph theory
                     </li>
                     <li>
-                    Strengthened understanding of algorithms, command line interfaces, and data structures by leading a 2 hour study hall session
+                        Strengthened understanding of algorithms, command line interfaces, and data structures by leading a 2 hour study hall session
                     </li>
                     <li>
-                    Collaborated with learning assistants to create group activities to encourage critical thinking for 28 students
+                        Collaborated with learning assistants to create group activities to encourage critical thinking for 28 students
                     </li>
                 </ul>
             </div>
-            <h1 className="text-4xl my-8 font-bold tracking-wider text-center">Projects</h1>
-            <div>
-                <h2 className="text-2xl my-4">Neighborhood Dataset</h2>
+            
+            <h1 className={`text-4xl my-8 font-bold tracking-wider text-center ${getHeadingStyle()}`}>Projects</h1>
+            
+            <div className={`p-4 my-4 rounded-lg border ${getProjectCardStyle()}`}>
+                <h2 className={`text-2xl mb-2 ${getHeadingStyle()}`}>Neighborhood Dataset</h2>
                 <p>Accomplished a detailed analysis of neighborhood pricing, utilizing Python libraries such as scikit-learn and Selenium,
                 by scraping data from sources such as Apartments.com and Zillow, and developing a model to predict prices</p>
             </div>
-            <div>
-                <h2 className="text-2xl my-4">Prayer Application</h2>
+            
+            <div className={`p-4 my-4 rounded-lg border ${getProjectCardStyle()}`}>
+                <h2 className={`text-2xl mb-2 ${getHeadingStyle()}`}>Prayer Application</h2>
                 <p>Created an Android application, leveraging Kotlin, implementing object hierarchies, local storage, and permissions,
                 allowing users to log into an account via authentication, check up to date prayer times, and utilize the compass</p>
             </div>
-            <div>
-                <h2 className="text-2xl my-4">Shell Console</h2>
+            
+            <div className={`p-4 my-4 rounded-lg border ${getProjectCardStyle()}`}>
+                <h2 className={`text-2xl mb-2 ${getHeadingStyle()}`}>Shell Console</h2>
                 <p>Built a local terminal, leveraging C, allowing users to perform various commands, including listing current directory, piping output to
                 another command, outputting the results of a command to a file, and job management</p>
             </div>
-            <div>
-                <h2 className="text-2xl my-4">Online Poker</h2>
+            
+            <div className={`p-4 my-4 rounded-lg border ${getProjectCardStyle()}`}>
+                <h2 className={`text-2xl mb-2 ${getHeadingStyle()}`}>Online Poker</h2>
                 <p>Developed an online Poker game, implementing multithreading and networking, in Java allowing users to enjoy a betting game where
-                two players (and in future updates, up to 8 players) can bet on a hand and compete </p>
-            </div>
-            <div>
-                <h1 className="text-4xl my-4">Todos:</h1>
-                <AboutComponent tasks={task} />
+                two players (and in future updates, up to 8 players) can bet on a hand and compete</p>
             </div>
         </div>
-    )
+    );
 }

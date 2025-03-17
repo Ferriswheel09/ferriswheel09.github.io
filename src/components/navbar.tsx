@@ -30,10 +30,23 @@ export default function Navbar() {
     setCurrentURL(new_url)
   })
 
+  const getThemeIcon = (key:string) => {
+    switch (key) {
+      case 'home':
+        return <Home color={`${theme === 'dark' ? '#FFFFFF' : '#000000'}`} />;
+      case 'projects':
+        return <Monitor color={`${theme === 'dark' ? '#FFFFFF' : '#000000'}`} />;
+      case 'posts':
+        return <Bookmark color={`${theme === 'dark' ? '#FFFFFF' : '#000000'}`} />;
+      default:
+        return null;
+    }
+  }
+
   const navItems = [
-    { key: 'home', href: '/', icon: <Home />, label: 'Home' },
-    { key: 'projects', href: '/projects', icon: <Monitor />, label: 'Projects' },
-    { key: 'posts', href: '/posts', icon: <Bookmark />, label: 'Posts' },
+    { key: 'home', href: '/', icon: getThemeIcon('home'), label: 'Home' },
+    { key: 'projects', href: '/projects', icon: getThemeIcon('projects'), label: 'Projects' },
+    //{ key: 'posts', href: '/posts', icon: getThemeIcon('posts'), label: 'Posts' },
   ];
 
 
@@ -75,7 +88,7 @@ export default function Navbar() {
             <li key={item.key} >
               <Link
                 href={item.href}
-                className={`${theme === 'dark' ? 'bg-black border-white text-white' : 'bg-white border-black text-black'} transition flex flex-row space-x-2 border-2 max-w-32 min-w-fit border-white rounded-3xl p-4 mx-2 hover:text-black hover:bg-slate-100 hover:shadow-xl hover:-translate-y-1 hover:scale-110`}
+                className={`${theme === 'dark' ? 'bg-black border-white text-white' : 'bg-white border-black text-black'} transition flex flex-row space-x-2 border-2 max-w-32 min-w-fit border-white rounded-3xl p-4 mx-2  hover:shadow-xl hover:-translate-y-1 hover:scale-110`}
               >
                 {item.icon}
                 <p className="">{item.label}</p>
