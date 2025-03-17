@@ -2,9 +2,7 @@
 const nextConfig = {
     output: 'export',
     basePath: "/portfolio-site",
-    images: {
-        unoptimized: true,
-      },
+    reactStrictMode: true,
       typescript: {
         // !! WARN !!
         // Ignoring build errors can be dangerous in production!
