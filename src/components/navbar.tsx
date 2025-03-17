@@ -3,34 +3,35 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Home from "@/resources/home";
-import Info from "@/resources/about";
 import Monitor from "@/resources/project";
 import Bookmark from "@/resources/post";
-import { usePathname, useSearchParams } from 'next/navigation'
+import { usePathname } from 'next/navigation'
 import { ThemeSwitcher } from "./themeSwitcher"
 import { useTheme } from "next-themes";
 
-
 export default function Navbar() {
-
-  const [url, setCurrentURL] = useState('');
   const [dropdownState, setDropdownState] = useState(false);
-
-  const pathname = usePathname()
-  const searchParams = useSearchParams()
-
+  const pathname = usePathname();
   const { theme } = useTheme();
 
+  // Use only pathname and hash to track navigation changes
   useEffect(() => {
-    const new_url = `${pathname}${window.location.hash}?${searchParams}`
-    console.log("Current URL", new_url);
-    if (url != new_url) {
-      setDropdownState(false)
-    }
-    setCurrentURL(new_url)
-  })
+    const handleRouteChange = () => {
+      setDropdownState(false);
+    };
 
-  const getThemeIcon = (key:string) => {
+    // Close dropdown when pathname changes
+    handleRouteChange();
+    
+    // Optional: Add event listener for hash changes if needed
+    window.addEventListener('hashchange', handleRouteChange);
+    
+    return () => {
+      window.removeEventListener('hashchange', handleRouteChange);
+    };
+  }, [pathname]);
+
+  const getThemeIcon = (key: string) => {
     switch (key) {
       case 'home':
         return <Home color={`${theme === 'dark' ? '#FFFFFF' : '#000000'}`} />;
@@ -48,8 +49,6 @@ export default function Navbar() {
     { key: 'projects', href: '/projects', icon: getThemeIcon('projects'), label: 'Projects' },
     //{ key: 'posts', href: '/posts', icon: getThemeIcon('posts'), label: 'Posts' },
   ];
-
-
 
   return (
     <header className="navbar w-full z-50 text-black fixed top-0 left-0 right-0 mx-auto h-36">
@@ -99,4 +98,4 @@ export default function Navbar() {
       </div>
     </header>
   );
-} 
+}

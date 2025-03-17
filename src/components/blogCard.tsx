@@ -7,6 +7,7 @@ interface PostProps{
     title: string | "No Title";
     excerpt: string | "No Excerpt";
     slug: string | "No Slug";
+    date: string | "No Date";
 }
 
 const BlogCard = ({post}:{post: PostProps, index:number}) => {
