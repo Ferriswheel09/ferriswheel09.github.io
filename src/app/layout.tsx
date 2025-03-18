@@ -13,7 +13,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="flex flex-col min-h-screen bg-gradient-to-r from-grad-grey to-black">
-        <NextThemesProvider attribute="class" defaultTheme="light">
+        <NextThemesProvider attribute="class">
           <Navbar /> {/* Header */}
           <main className="flex-grow">{children}</main> {/* Content */}
           <Footer /> {/* Footer */}
