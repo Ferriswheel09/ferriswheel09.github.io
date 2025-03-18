@@ -1,40 +1,28 @@
 "use client"
 
 import React from "react";
-import { useTheme } from "next-themes";
 
 export default function ProjectPage() {
-    const { theme } = useTheme();
     
     // Theme-based styles
     const getPageStyle = () => {
-        return theme === 'dark' 
-            ? "bg-gray-900 text-white" 
-            : "bg-gray-50 text-gray-800";
+        return "bg-gray-900 text-white";
     };
     
     const getHeadingStyle = () => {
-        return theme === 'dark'
-            ? "text-white" 
-            : "text-gray-900";
+        return "text-white";
     };
     
     const getSubHeadingStyle = () => {
-        return theme === 'dark'
-            ? "text-gray-200" 
-            : "text-gray-800";
+        return "text-gray-200";
     };
     
     const getDateStyle = () => {
-        return theme === 'dark'
-            ? "text-gray-400" 
-            : "text-gray-600";
+        return "text-gray-400"; 
     };
     
     const getProjectCardStyle = () => {
-        return theme === 'dark'
-            ? "bg-gray-800 border-gray-700" 
-            : "bg-white border-gray-200";
+        return "bg-gray-800 border-gray-700"; 
     };
 
     return (

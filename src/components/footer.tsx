@@ -1,24 +1,21 @@
 "use client";
 
 import React from "react";
-import { useTheme } from "next-themes";
 import Github from "@/resources/github";
 import LinkedIn from "@/resources/linkedin";
 
 export default function Footer() {
-    const { theme } = useTheme();
-    
     return(
-        <div className={`${theme === 'dark' ? 'bg-neutral-900' : 'bg-neutral-100'} pt-2 border-t-2 z-50`}>
+        <div className={`'bg-neutral-900' pt-2 border-t-2 z-50`}>
             <div className="flex flex-row align-center justify-center">
                 <a href="https://github.com/Ferriswheel09/" target="_blank" className="px-1">
                     <div className="h-10 hover:-translate-y-1 hover:scale-110 hover:cursor-pointer">
-                        <Github color={`${theme === 'dark' ? '#FFFFFF' : '#000000'}`}/>
+                        <Github color={`#FFFFFF`}/>
                     </div>
                 </a>
                 <a href="https://www.linkedin.com/in/faris-jiwad/" target="_blank" className="px-1">
                     <div className="h-10 hover:-translate-y-1 hover:scale-110 hover:cursor-pointer">
-                        <LinkedIn color={`${theme === 'dark' ? '#FFFFFF' : '#000000'}`}/>
+                        <LinkedIn color={`#FFFFFF`}/>
                     </div>
                 </a>
             </div>

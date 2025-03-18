@@ -5,7 +5,7 @@ import { ReactTyped } from "react-typed";
 
 export default function HomePage() {
   return (
-    <div className="flex items-center justify-center h-full w-full px-5 bg-gradient-to-r from-grad-purp to-grad-blue">
+    <div className="flex items-center justify-center h-full w-full px-5 bg-gradient-to-r from-[#1a1a2e] via-black via-50% to-[#16213e]">
       <div className="text-center">
         <h2 className="text-2xl text-slate-400 mb-4">
           Hey there, I'm Faris. I code things and they work sometimes
