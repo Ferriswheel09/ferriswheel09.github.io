@@ -15,6 +15,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <meta name="google-site-verification" content="TmH1wrIYQ4K6GNt0fDj5RDAbhU24kkEHvBLqKps7iC8" />
+      </head>
       <body className="flex flex-col min-h-screen bg-gradient-to-r from-grad-grey to-black">
           <Navbar /> {/* Header */}
           <main className="flex-grow">{children}</main> {/* Content */}
