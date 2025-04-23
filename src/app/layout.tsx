@@ -2,6 +2,12 @@ import "./globals.css";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 
+export const metadata = {
+  title: "Faris Jiwad",
+  description: "Faris Jiwad is a software developer and researcher, always looking to tackle new problems",
+  keywords: "Faris Jiwad, Software Engineer, Fullstack, Systems, ML, Developer",
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
